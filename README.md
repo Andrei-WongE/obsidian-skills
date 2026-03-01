@@ -7,7 +7,7 @@ A consolidated collection of Gemini CLI skills for interacting with Obsidian vau
 This collection is a **Gemini Extension**, allowing you to install all 5 skills with a single command:
 
 ```bash
-gemini extensions install https://github.com/Andrei-WongE/obsidian-skills-gemini
+gemini extensions install https://github.com/Andrei-WongE/obsidian-skills
 ```
 
 ### For Local Development
