@@ -1,0 +1,7 @@
+{
+  "name": "obsidian-skills",
+  "version": "1.0.0",
+  "description": "A collection of Gemini CLI skills for interacting with Obsidian vaults, creating Obsidian-flavored Markdown, building visual canvases, and managing database-like views. Original skills by Kepano, translated to Gemini structure by Andrei WongE.",
+  "author": "Kepano",
+  "license": "MIT"
+}
