@@ -30,11 +30,31 @@ gemini extensions link .
 
 ## Structure
 
-This repository is a **Gemini Extension**:
+This repository is organized as a **Gemini Extension** bundle. To bundle multiple skills into a single installation, the following directory structure is required:
 
-- **`gemini-extension.json`**: Extension manifest that bundles all skills.
-- **`skills/`**: Contains the 5 individual skill definitions (`SKILL.md`).
-- **`*/claude/`**: Compatibility with Claude Code and other agent platforms.
+```text
+obsidian-skills-gemini/
+├── gemini-extension.json     # Required: Extension manifest (name, version, etc.)
+├── README.md                 # Project documentation
+└── skills/                   # Required: Folder containing all bundled skills
+    ├── obsidian-markdown/    # Subfolder for a specific skill
+    │   ├── SKILL.md          # Required: Skill definition file
+    │   └── references/       # Supporting documentation for the skill
+    ├── obsidian-cli/
+    │   └── SKILL.md
+    ├── obsidian-bases/
+    │   └── SKILL.md
+    ├── defuddle/
+    │   └── SKILL.md
+    └── json-canvas/
+        └── SKILL.md
+```
+
+### Key Components
+
+- **`gemini-extension.json`**: The presence of this file at the root tells the Gemini CLI that this repository is an extension bundle. It contains the extension's metadata.
+- **`skills/` Directory**: Gemini CLI automatically scans this directory to discover and register all individual skills. Each skill must have its own subfolder containing a `SKILL.md` file.
+- **`claude/` (Optional)**: Each skill folder also includes a `claude/` directory for compatibility with Claude Code.
 
 ## Usage
 
